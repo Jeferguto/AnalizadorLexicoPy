@@ -39,48 +39,67 @@
 <tk_delim_=,18,12>
 <tk_entero,4,18,14>
 <id,j,18,15>
-<id,resultado,21,1>
-<tk_delim_=,21,11>
-<tk_delim_(,21,13>
-<id,variable_1,21,14>
-<tk_op_+,21,25>
-<id,_variable2,21,27>
-<tk_delim_),21,37>
-<tk_op_*,21,39>
-<id,flotante,21,41>
-<tk_op_/,21,50>
-<tk_entero,2,21,52>
-<tk_op_**,21,54>
-<tk_entero,3,21,57>
+<id,hellou,20,1>
+<tk_delim_=,20,7>
+<tk_float,90.00,20,8>
+<tk_float,.50,20,13>
+<id,x,22,1>
+<tk_delim_=,22,2>
+<tk_entero,2,22,3>
+<id,y,23,1>
+<tk_delim_=,23,2>
+<tk_entero,5,23,3>
 <if,24,1>
-<id,variable_1,24,4>
-<tk_op_>=,24,15>
-<tk_entero,10,24,18>
-<and,24,21>
-<id,_variable2,24,25>
-<tk_op_<,24,36>
-<tk_entero,30,24,38>
-<tk_delim_:,24,40>
-<id,print,25,5>
-<tk_delim_(,25,10>
-<tk_cadena,"Las comparaciones funcionan bien.",25,11>
-<tk_delim_),25,46>
-<id,grande,30,1>
-<tk_delim_=,30,8>
-<tk_float,1e10,30,10>
-<id,peque,31,1>
-<tk_delim_=,31,7>
-<tk_float,2.5e-4,31,9>
-<tk_entero,1,35,1>
-<id,_variable_incorrecto,35,2>
-<tk_delim_=,35,23>
-<tk_entero,100,35,25>
-<id,resultado2,38,1>
-<tk_delim_=,38,12>
-<tk_op_@,38,14>
-<id,ariable_1,38,16>
-<tk_op_+,38,26>
-<tk_entero,5,38,28>
-<id,cadena_incompleta,41,1>
-<tk_delim_=,41,19>
-<tk_error,cadena sin cierre,41,21>
+<id,x,24,4>
+<tk_op_!=,24,5>
+<tk_delim_:,24,8>
+<id,print,25,4>
+<tk_delim_(,25,9>
+<tk_cadena,'hola')
+   x++
+else:
+   return 0	
+
+# Operadores
+resultado = (variable_1 + _variable2) * flotante / 2 ** 3
+
+# Comparación
+if variable_1 >= 10 and _variable2 < 30:
+    print(",25,10>
+<id,Las,25,183>
+<id,comparaciones,25,187>
+<id,funcionan,25,201>
+<id,bien,25,211>
+<tk_float,.,25,215>
+<tk_cadena,")
+
+# Comentario ignorado por el lexer
+
+# Literales con exponentes
+grande = 1e10
+peque = 2.5e-4
+
+f0r i in range(5):
+   print(",25,215>
+<id,hola,25,341>
+<tk_cadena,")	
+  
+1¬2354678909
+2.553824while3!=¬56.a
+ 
+
+# Error léxico introducido aquí:
+# Identificador no válido (comienza con un número)
+#1_variable_incorrecto = 100
+
+# Caracteres no válidos en un contexto incorrecto
+#resultado2 = @variable_1 + 5
+
+# Cadena de texto sin cierre
+#cadena_incompleta = ",25,345>
+<id,Esto,25,636>
+<id,es,25,641>
+<id,una,25,644>
+<id,cadena,25,648>
+<id,sin,25,655>
+<id,cierre,25,659>

@@ -16,7 +16,7 @@ soft_keywords = {'match', 'case', 'type', '_'}
 operators = {
     '+', '-', '*', '**', '/', '//', '%', '@',
     '<<', '>>', '&', '|', '^', '~', ':=',
-    '<', '>', '<=', '>=', '==', '!='
+    '<', '>', '<=', '>=', '==', '!=',"!"
 }
 
 # Delimitadores
@@ -172,6 +172,8 @@ def lex(file_input):
                 print(f'>>> Error léxico (línea {line_num}, posición {column_num}): cadena de texto sin cierre.')
                 tokens.append(('tk_error', 'cadena sin cierre', line_num, column_num))
             continue
+
+
 
         # Error léxico para caracteres no reconocidos
         if char.isprintable() and not (is_whitespace(char) or is_letter(char) or is_digit(char) or is_operator(char) or is_delimiter(char)):

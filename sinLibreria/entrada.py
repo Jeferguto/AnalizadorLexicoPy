@@ -17,6 +17,16 @@ entero = 42
 flotante = 3.1415
 imaginario = 4j
 
+hellou=90.00.50
+
+x=2
+y=5
+if x!=y:
+   print('hola')
+   x++
+else:
+   return 0	
+
 # Operadores
 resultado = (variable_1 + _variable2) * flotante / 2 ** 3
 
@@ -29,6 +39,13 @@ if variable_1 >= 10 and _variable2 < 30:
 # Literales con exponentes
 grande = 1e10
 peque = 2.5e-4
+
+f0r i in range(5):
+   print("hola")	
+  
+1¬2354678909
+2.553824while3!=¬56.a
+ 
 
 # Error léxico introducido aquí:
 # Identificador no válido (comienza con un número)
