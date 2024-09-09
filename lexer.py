@@ -6,7 +6,7 @@ reserved_words = {
     'and', 'continue', 'for', 'lambda', 'try',
     'as', 'def', 'from', 'nonlocal', 'while',
     'assert', 'del', 'global', 'not', 'with',
-    'async', 'elif', 'if', 'or', 'yield'
+    'async', 'elif', 'if', 'or', 'yield','range'
 }
 
 # Palabras claves suaves
@@ -161,6 +161,21 @@ def lex(file_input):
             start = i
             i += 1
             while i < len(content) and content[i] != '"':
+                i += 1
+            if i < len(content):  # Si encontramos la comilla de cierre
+                i += 1  # Cerrar la comilla
+                lexeme = content[start:i]
+                tokens.append(('tk_cadena', lexeme, line_num, column_num))
+                column_num += (i - start)
+            else:
+                # Error de cadena incompleta
+                print(f'>>> Error léxico (línea {line_num}, posición {column_num}): cadena de texto sin cierre.')
+                tokens.append(('tk_error', 'cadena sin cierre', line_num, column_num))
+            continue
+        if char == "'":
+            start = i
+            i += 1
+            while i < len(content) and content[i] != "'":
                 i += 1
             if i < len(content):  # Si encontramos la comilla de cierre
                 i += 1  # Cerrar la comilla
